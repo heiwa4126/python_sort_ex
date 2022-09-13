@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-sort algorithm example
+sort algorithm examples
 from https://cs50.jp/x/2021/week3/notes/
 """
 from typing import Callable
 
 
 def gen_list() -> list[int]:
-    return [6, 3, 8, 5, 2, 7, 4, 1]
+    return [9, 6, 3, 8, 5, 2, 7, 4, 1]
 
 
 def selection_sort(a: list[int]) -> list[int]:
@@ -16,7 +16,7 @@ def selection_sort(a: list[int]) -> list[int]:
         return a
     for i in range(0, len(a)):
         min_idx = i
-        for j in range(i, len(a)):
+        for j in range(i + 1, len(a)):
             if a[j] < a[min_idx]:
                 min_idx = j
         if min_idx != i:
